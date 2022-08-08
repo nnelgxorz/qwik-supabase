@@ -2,8 +2,6 @@
 
 A simple wrapper around Supabase.js to enable usage within Qwik.
 
-_Note this is not currently building correctly. So, for now, if you want to use it, you'll need to copy the `src` folder into your project and import that way rather than use npm._
-
 ## Installation
 
 ```bash
