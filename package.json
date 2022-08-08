@@ -1,0 +1,45 @@
+{
+  "name": "qwik-supabase",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "A simple wrapper around Supabase.js to enable usage within Qwik.",
+  "homepage": "https://github.com/tmns/qwik-supabase#readme",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint --ext=js,ts,jsx,tsx .",
+    "lint:fix": "eslint --ext=js,ts,jsx,tsx . --fix"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^1.35.6"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.0.39",
+    "@types/eslint": "8.4.5",
+    "@typescript-eslint/eslint-plugin": "5.32.0",
+    "bumpp": "^8.2.1",
+    "esbuild": "^0.14.53",
+    "eslint": "8.21.0",
+    "eslint-plugin-qwik": "0.0.39",
+    "prettier": "2.7.1",
+    "tsup": "^6.2.1",
+    "typescript": "4.7.4"
+  },
+  "keywords": [
+    "supabase",
+    "qwik"
+  ],
+  "author": "tmns <tmn5@pm.me>",
+  "license": "WTFPL"
+}
