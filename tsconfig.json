@@ -1,19 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["dom", "esnext", "dom.iterable"],
+    "allowJs": true,
+    "target": "ES2017",
+    "module": "ES2020",
+    "lib": ["es2020", "DOM"],
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
     "strict": true,
+    "declaration": true,
+    "declarationDir": "dist/types",
     "resolveJsonModule": true,
-    "noImplicitOverride": true,
-    "noUnusedLocals": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "types": ["vite/client"],
   },
-  "include": ["src", "vite.config.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
